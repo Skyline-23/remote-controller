@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import WebKit
 import CocoaAsyncSocket
 
-class ViewController: UIViewController, GCDAsyncSocketDelegate {
+class ViewController: UIViewController, WKUIDelegate, UIScrollViewDelegate, GCDAsyncSocketDelegate {
+    
+    @IBOutlet weak var webView: WKWebView!
     
     enum list: String {
         case front = "Go"
@@ -17,6 +20,7 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
         case right = "Right"
         case connection_sign = "iOS"
     }
+    
     // 호스트 지정
     let host = "192.168.43.7"
     // 포트 번호 지정
@@ -26,8 +30,26 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        // URL 요청
+        loadURL()
         // Do any additional setup after loading the view.
     }
+    
+    func loadURL() {
+        let url = URL(string: "http://192.168.43.45:8091/?action=stream")
+        let request = URLRequest(url: url!)
+        
+        // request 불러오기
+        webView.load(request)
+        
+        //델리게이트 설정
+        webView.uiDelegate = self
+        webView.scrollView.delegate = self
+        
+        self.webView.scrollView.isScrollEnabled = false
+    }
+    
+    // 뷰가 나타나고 사라질때 설정
     override func viewDidAppear(_ animated: Bool) {
         connect(host: host, port: port)
     }
@@ -92,4 +114,3 @@ class ViewController: UIViewController, GCDAsyncSocketDelegate {
         print(string!)
     }
 }
-

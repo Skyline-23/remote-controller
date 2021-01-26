@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cp-OV-OlM">
-                                <rect key="frame" x="174.5" y="363" width="65" height="70"/>
+                                <rect key="frame" x="174.5" y="506" width="65" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="35b-W5-T3I"/>
                                     <constraint firstAttribute="width" constant="65" id="ity-AQ-GNN"/>
@@ -30,7 +30,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d85-wW-65e">
-                                <rect key="frame" x="174.5" y="463" width="65" height="70"/>
+                                <rect key="frame" x="174.5" y="606" width="65" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="65" id="EQn-zx-G0K"/>
                                     <constraint firstAttribute="height" constant="70" id="QUP-TX-suv"/>
@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LCQ-qW-hLz">
-                                <rect key="frame" x="222" y="415.5" width="70" height="65"/>
+                                <rect key="frame" x="222" y="558.5" width="70" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="LKd-kI-JJR"/>
                                     <constraint firstAttribute="height" constant="65" id="kdw-71-E81"/>
@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAK-aW-Ncq">
-                                <rect key="frame" x="122" y="415.5" width="70" height="65"/>
+                                <rect key="frame" x="122" y="558.5" width="70" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="IKg-4d-9kh"/>
                                     <constraint firstAttribute="width" constant="70" id="NNo-7m-Xy6"/>
@@ -65,21 +65,38 @@
                                     <action selector="leftarrow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8v2-Gq-xCU"/>
                                 </connections>
                             </button>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q2a-R6-fP0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="290"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="vXp-Fc-OUF"/>
+                                </constraints>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xAK-aW-Ncq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1In-L8-boA"/>
-                            <constraint firstItem="LCQ-qW-hLz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="20L-LV-g3b"/>
+                            <constraint firstItem="2cp-OV-OlM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="418" id="5ye-ay-hZO"/>
                             <constraint firstItem="d85-wW-65e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9wM-X2-ZdU"/>
-                            <constraint firstItem="2cp-OV-OlM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="Ntu-NU-ZyE"/>
+                            <constraint firstItem="Q2a-R6-fP0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="D1Z-uz-2rm"/>
+                            <constraint firstItem="xAK-aW-Ncq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="470.5" id="I61-DW-DZ4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q2a-R6-fP0" secondAttribute="trailing" id="P2G-Gr-v8n"/>
+                            <constraint firstItem="Q2a-R6-fP0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="T5w-sH-BuT"/>
                             <constraint firstItem="xAK-aW-Ncq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-50" id="WAZ-Jq-GEa"/>
-                            <constraint firstItem="d85-wW-65e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="50" id="cqA-LK-a2Q"/>
+                            <constraint firstItem="d85-wW-65e" firstAttribute="top" secondItem="2cp-OV-OlM" secondAttribute="bottom" constant="30" id="uKe-KZ-0wi"/>
                             <constraint firstItem="LCQ-qW-hLz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="50" id="unp-FP-lAB"/>
                             <constraint firstItem="2cp-OV-OlM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w3l-yU-ZNH"/>
+                            <constraint firstItem="LCQ-qW-hLz" firstAttribute="top" secondItem="Q2a-R6-fP0" secondAttribute="bottom" constant="180.5" id="z2F-ZK-QaD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="수동 조종" id="yvM-eB-dak"/>
+                    <connections>
+                        <outlet property="webView" destination="Q2a-R6-fP0" id="epf-Av-O8R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
